@@ -1,0 +1,55 @@
+<DOCTYPE html>
+  <html>
+  <head>
+    <title>This is about me</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>My Bio<h2>
+    <p>My name is Brandon Holderman and I will be telling you about myself<p>
+      <header>Hobbies</header>
+      <ul>
+        <li>Cars</li>
+        <li>Snowboarding</li>
+        <li>Video Games</li>
+      </ul>
+
+      <script>
+
+        var userName = prompt('What\'s your name?');
+      alert('Hello ' + userName + '. Thanks for coming to site!');
+        // We want to ask the user a question,
+        // take their answer as input; stored in a var
+        // Validate that their answer matches my answer
+        // Depending on true or false, provide feedback
+
+       var answerOne = prompt('What state was I born in?');
+       var myAnswerOne = 'Washington';
+       if(answerOne === myAnswerOne) {
+         alert('You got it right. I was born in Washington');
+       } else {
+         alert('Sorry, that\'s wrong. I was born in Washington');
+       }
+
+      var answerTwo = prompt('Do you want to code?');
+      var userAnswer = ('Yes', 'yes', 'y')
+
+      if(answerTwo === userAnswer) {
+        console.log('Great let\'s start!');
+      } else {
+        console.log('Maybe next time');
+      }
+
+
+      var food = prompt('What type of food would you like to eat?');
+      var foodTypes = ['pizza', 'burgers', 'tacos'];
+
+      if(food === foodTypes) {
+        alert('Sounds delicious!');
+      } else {
+        alert('You\'re disgusting');
+      }
+      </script>
+    </body>
+
+    </html>
