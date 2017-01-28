@@ -37,7 +37,7 @@ console.log(home);
 if(home.toLowerCase() === localAnswer) {
   alert('You\'re right I\'m Seattleite!');
 } else {
-  alert('Well Welcome to Emerald City!');
+  alert('Wrong, I\'m from Seattle');
 }
 
 //Question 4
