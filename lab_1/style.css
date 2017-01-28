@@ -1,19 +1,15 @@
 body {
-  /*background-image: url("http://www.hotel-r.net/im/hotel/ua/matrix-5.jpg");*/
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-  color:
+  background-color: #a91c1c;
+  color: #c2c9d0;
+  font-family: sans-serif;
+
 }
 
 h2 {
+  color: #f4feff;
 
 }
 
 h3 {
-
-}
-
-ul{
-
+  color: #ffffff;
 }
