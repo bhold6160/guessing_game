@@ -17,3 +17,8 @@ h3 {
 h4 {
   color: #ffffff;
 }
+
+.right {
+  float: right;
+  margin: 100px
+}
