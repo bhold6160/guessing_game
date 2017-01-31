@@ -28,7 +28,6 @@ if(answerOne.toLowerCase() === myAnswerOne) {
   alert('Sorry, that\'s wrong. I grew up in Washington');
 }
 
-
 //Question 3
 var home = prompt('Do I live in Seattle?');
 var localAnswer = ('yes')
@@ -73,4 +72,46 @@ if(languageTypes.indexOf(myLanguage) !== -1) {
   alert('Wunderbar!');
 } else {
   alert('Not today');
+}
+
+//Question 7
+var myNumber = 7;
+var count = 1;
+
+while (count < 5) {
+  count++;
+  var userNumber = parseInt(prompt('What number am I thinking of 1-50'));
+  console.log(userNumber);
+  if (count === 5) {
+    alert('Sorry out of chances.');
+  } else if (userNumber === myNumber) {
+    alert('You are correct sir');
+    break;
+  } else if (userNumber < myNumber) {
+    alert('Too Low Joe');
+  } else if (userNumber > myNumber) {
+    alert('Too High Guy');
+  }
+}
+
+//Question 8
+var favConsole = ['PS4','XBOX','Nintendo'];
+var rejectAnswer = ('pc')
+var counter = 1;
+
+while (counter < 6) {
+  counter++;
+  var userFav = prompt('What is your favorite game console?');
+  console.log(userFav);
+  if (counter === 6) {
+    alert('Out of turns');
+  } else if(favConsole.indexOf(userFav) != -1) {
+    alert('Congrats you\'re a true gamer!');
+    break;
+  } else if (userFav === rejectAnswer) {
+    alert('That\'s not a console! game over...');
+    break;
+  } else {
+    alert('Try Again...');
+  }
 }
