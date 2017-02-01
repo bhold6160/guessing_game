@@ -7,12 +7,15 @@ console.log(userName);
 // Depending on true or false, provide feedback
 
 //Question 1
+var gameTally = 0;
 var answerTwo = prompt('Do you want to play a game?');
 var userAnswer = ('yes');
 console.log(answerTwo);
 
 if(answerTwo.toLowerCase() === userAnswer) {
   alert('Great let\'s start!');
+  gameTally =+ 1;
+  console.log(gameTally)
 } else {
   alert('Well... Maybe next time');
 }
@@ -24,6 +27,8 @@ console.log(answerOne);
 
 if(answerOne.toLowerCase() === myAnswerOne) {
   alert('Correct! I grew up in Washington');
+  gameTally += 1;
+  console.log(gameTally)
 } else {
   alert('Sorry, that\'s wrong. I grew up in Washington');
 }
@@ -35,17 +40,21 @@ console.log(home);
 
 if(home.toLowerCase() === localAnswer) {
   alert('You\'re right I\'m Seattleite!');
+  gameTally += 1
+  console.log(gameTally)
 } else {
   alert('Wrong, I\'m from Seattle');
 }
 
 //Question 4
-var hobbies = prompt('What are my favorite hobbies?');
+var hobbies = prompt('What are one of my favorite hobbies?');
 var hobbyChoice = ['cars','snowboarding','video games','coding'];
 console.log(hobbies);
 
 if(hobbyChoice.indexOf(hobbies) !== -1) {
   alert('Wow how did you know that?!');
+  gameTally += 1
+  console.log(gameTally)
 } else {
   alert('Not even close, BUD!');
 }
@@ -55,10 +64,12 @@ var food = prompt('What are my favorite types of food?'); // prompting the user 
 var foodTypes = ['pizza','tacos','burgers']; // creating an array and asigning it a value
 
 console.log('You\'re answer is ' + food); //console logging the users answer to the prompted question
-console.log(foodTypes.indexOf(food)); //console logging where in the array the users answer is found or not found
+// console.log(foodTypes.indexOf(food)); //console logging where in the array the users answer is found or not found
 
 if(foodTypes.indexOf(food) !== -1) {
   alert('Correct! They\'re delicious!');
+  gameTally += 1;
+  console.log(gameTally)
 } else {
   alert('Disgusting...');
 }
@@ -70,6 +81,8 @@ console.log(myLanguage);
 
 if(languageTypes.indexOf(myLanguage) !== -1) {
   alert('Wunderbar!');
+  gameTally += 1;
+  console.log(gameTally)
 } else {
   alert('Not today');
 }
@@ -87,6 +100,8 @@ while (count < 5) {
   } else if (userNumber === myNumber) {
     alert('You are correct sir');
     break;
+    gameTally += 1;
+    console.log(gameTally)
   } else if (userNumber < myNumber) {
     alert('Too Low Joe');
   } else if (userNumber > myNumber) {
@@ -95,23 +110,85 @@ while (count < 5) {
 }
 
 //Question 8
-var favConsole = ['PS4','XBOX','Nintendo'];
-var rejectAnswer = ('pc')
+var favConsole = ['ps4','xbox','nintendo','sega','atari'];
+var rejectAnswer = 'pc';
 var counter = 1;
 
 while (counter < 6) {
   counter++;
   var userFav = prompt('What is your favorite game console?');
   console.log(userFav);
+
   if (counter === 6) {
     alert('Out of turns');
-  } else if(favConsole.indexOf(userFav) != -1) {
+    break;
+
+} if (userFav === 'ps4') {
+    gameTally += 1;
+    for (i = 0; i < favConsole.length; i++)
     alert('Congrats you\'re a true gamer!');
     break;
-  } else if (userFav === rejectAnswer) {
-    alert('That\'s not a console! game over...');
-    break;
-  } else {
-    alert('Try Again...');
+
+} if (favConsole === 'xbox') {
+  gameTally += 1;
+  for (i = 0; i < favConsole.length; i++)
+  alert('Congrats you\'re a true gamer!');
+  break;
+
+} if (favConsole === 'nintendo') {
+  gameTally += 1;
+  for (i = 0; i < favConsole.length; i++)
+  alert('Congrats you\'re a true gamer!');
+  break;
+
+} if (favConsole === 'sega') {
+  gameTally += 1;
+  for (i = 0; i < favConsole.length; i++)
+  alert('Congrats you\'re a true gamer!');
+  break;
+
+} if (favConsole === 'atari') {
+  gameTally += 1;
+  for (i = 0; i < favConsole.length; i++)
+  alert('Congrats you\'re a true gamer!');
+  break;
+
+} else if (favConsole === rejectAnswer) {
+  alert('That\'s not a console! Game over.')
+  break;
+
+} else {
+  alert('Try Again...')
+}
   }
 }
+
+//Total score tally
+if (gameTally === 8) {
+  alert('You got them all correct! ' + userName + '.');
+}
+if (gameTally === 7) {
+  alert('You got 7 out of 8 ' + userName + '. Great job!');
+}
+if (gameTally === 6) {
+  alert('You got 6 out of 8 ' + userName + '. Nice work.');
+}
+if (gameTally === 5) {
+  alert('You got 5 out of 8' + userName + '. Not too shabby.');
+}
+if (gameTally === 4) {
+  alert('You got 4 out of 8' + userName + '. Not terrible.');
+}
+if (gameTally === 3) {
+  alert('You got 3 out of 8' + userName + '. Could do better.');
+}
+if (gameTally === 2) {
+  alert('You got 2 out of 8' + userName + '. Not very good.');
+}
+if (gameTally === 1) {
+  alert('You got 1 out of 8' + userName + '. Awful...');
+}
+if (gameTally === 0) {
+  alert('You got them all wrong...');
+}
+console.log(gameTally);
