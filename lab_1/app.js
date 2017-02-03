@@ -14,8 +14,9 @@ console.log(answerTwo);
 
 if(answerTwo.toLowerCase() === userAnswer) {
   alert('Great let\'s start!');
-  gameTally =+ 1;
+  gameTally++;
   console.log(gameTally)
+
 } else {
   alert('Well... Maybe next time');
 }
@@ -27,8 +28,9 @@ console.log(answerOne);
 
 if(answerOne.toLowerCase() === myAnswerOne) {
   alert('Correct! I grew up in Washington');
-  gameTally += 1;
+  gameTally++;
   console.log(gameTally)
+
 } else {
   alert('Sorry, that\'s wrong. I grew up in Washington');
 }
@@ -40,8 +42,9 @@ console.log(home);
 
 if(home.toLowerCase() === localAnswer) {
   alert('You\'re right I\'m Seattleite!');
-  gameTally += 1
+  gameTally++;
   console.log(gameTally)
+
 } else {
   alert('Wrong, I\'m from Seattle');
 }
@@ -53,8 +56,9 @@ console.log(hobbies);
 
 if(hobbyChoice.indexOf(hobbies) !== -1) {
   alert('Wow how did you know that?!');
-  gameTally += 1
+  gameTally++;
   console.log(gameTally)
+
 } else {
   alert('Not even close, BUD!');
 }
@@ -68,21 +72,23 @@ console.log('You\'re answer is ' + food); //console logging the users answer to 
 
 if(foodTypes.indexOf(food) !== -1) {
   alert('Correct! They\'re delicious!');
-  gameTally += 1;
+  gameTally++;
   console.log(gameTally)
+
 } else {
   alert('Disgusting...');
 }
 
 //Question 6
 var myLanguage = prompt('What coding language would I like to learn?');
-var languageTypes = ['javascript','ios','html/css'];
+var languageTypes = ['javascript','swift','html/css'];
 console.log(myLanguage);
 
 if(languageTypes.indexOf(myLanguage) !== -1) {
   alert('Wunderbar!');
-  gameTally += 1;
+  gameTally++;
   console.log(gameTally)
+
 } else {
   alert('Not today');
 }
@@ -97,13 +103,16 @@ while (count < 5) {
   console.log(userNumber);
   if (count === 5) {
     alert('Sorry out of chances.');
+
   } else if (userNumber === myNumber) {
     alert('You are correct sir');
-    break;
-    gameTally += 1;
+    gameTally++;
     console.log(gameTally)
+    break;
+
   } else if (userNumber < myNumber) {
     alert('Too Low Joe');
+
   } else if (userNumber > myNumber) {
     alert('Too High Guy');
   }
@@ -111,7 +120,7 @@ while (count < 5) {
 
 //Question 8
 var favConsole = ['ps4','xbox','nintendo','sega','atari'];
-var rejectAnswer = 'pc';
+var rejectAnswer = ('pc')
 var counter = 1;
 
 while (counter < 6) {
@@ -121,49 +130,25 @@ while (counter < 6) {
 
   if (counter === 6) {
     alert('Out of turns');
-    break;
 
-} if (userFav === 'ps4') {
-    gameTally += 1;
-    for (i = 0; i < favConsole.length; i++)
+  } else if(favConsole.indexOf(userFav) != -1) {
     alert('Congrats you\'re a true gamer!');
+    gameTally++
+    console.log(gameTally)
     break;
 
-} if (favConsole === 'xbox') {
-  gameTally += 1;
-  for (i = 0; i < favConsole.length; i++)
-  alert('Congrats you\'re a true gamer!');
-  break;
+  } else if (userFav === rejectAnswer) {
+    alert('That\'s not a console! game over...');
+    break;
 
-} if (favConsole === 'nintendo') {
-  gameTally += 1;
-  for (i = 0; i < favConsole.length; i++)
-  alert('Congrats you\'re a true gamer!');
-  break;
-
-} if (favConsole === 'sega') {
-  gameTally += 1;
-  for (i = 0; i < favConsole.length; i++)
-  alert('Congrats you\'re a true gamer!');
-  break;
-
-} if (favConsole === 'atari') {
-  gameTally += 1;
-  for (i = 0; i < favConsole.length; i++)
-  alert('Congrats you\'re a true gamer!');
-  break;
-
-} else if (favConsole === rejectAnswer) {
-  alert('That\'s not a console! Game over.')
-  break;
-
-} else {
-  alert('Try Again...')
-}
+  } else {
+    alert('Try Again...');
   }
 }
 
 //Total score tally
+function score(gameTally) {
+
 if (gameTally === 8) {
   alert('You got them all correct! ' + userName + '.');
 }
@@ -174,21 +159,23 @@ if (gameTally === 6) {
   alert('You got 6 out of 8 ' + userName + '. Nice work.');
 }
 if (gameTally === 5) {
-  alert('You got 5 out of 8' + userName + '. Not too shabby.');
+  alert('You got 5 out of 8 ' + userName + '. Not too shabby.');
 }
 if (gameTally === 4) {
-  alert('You got 4 out of 8' + userName + '. Not terrible.');
+  alert('You got 4 out of 8 ' + userName + '. Not terrible.');
 }
 if (gameTally === 3) {
-  alert('You got 3 out of 8' + userName + '. Could do better.');
+  alert('You got 3 out of 8 ' + userName + '. Could do better.');
 }
 if (gameTally === 2) {
-  alert('You got 2 out of 8' + userName + '. Not very good.');
+  alert('You got 2 out of 8 ' + userName + '. Not very good.');
 }
 if (gameTally === 1) {
-  alert('You got 1 out of 8' + userName + '. Awful...');
+  alert('You got 1 out of 8 ' + userName + '. Awful...');
 }
 if (gameTally === 0) {
   alert('You got them all wrong...');
+  }
 }
+score(gameTally);
 console.log(gameTally);
