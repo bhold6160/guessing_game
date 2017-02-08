@@ -1,29 +1,26 @@
 body {
-  background-color: #a91c1c;
-  color: #c2c9d0;
+  background-color: #C3031D;
+  color: #312829;
   font-family: sans-serif;
 
 }
 
 h2 {
-  color: #ffffff;
+  color: #F1E6E8;
 
 }
 
 h3 {
-  color: #ffffff;
+  color: #745D60;
 }
 
-h4 {
-  color: #ffffff;
-}
-
-.right {
+#right {
   float: right;
   margin-right: 20%;
+  /*margin-top: 2%;*/
 }
 
-#picture {
-  float: left;
-  margin-left: 5px;
+#header {
+  text-align: center;
+  border: 5px solid #ffffff;
 }
