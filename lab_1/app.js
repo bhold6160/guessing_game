@@ -180,6 +180,6 @@ var buttonGame = function(clickMe) {
       alert('You got them all wrong...');
     }
   }
+  score(gameTally);
+  console.log(gameTally);
 }
-score(gameTally);
-console.log(gameTally);
